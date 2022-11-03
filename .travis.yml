@@ -10,14 +10,14 @@ script:
   - docker run -e CI=true aaron2905/react-test npm test -- --coverage
 
 after_success:
-  - docker buile -t aaron2905/multi-client ./client
-  - docker build -t aaron2905/multi-nginx ./nginx
-  - docker build -t aaron2905/multi-server ./server
-  - docker build -t aaron2905/multi-worker ./worker
+  - docker buile -t aaron2905/multi-client:least ./client
+  - docker build -t aaron2905/multi-nginx:least ./nginx
+  - docker build -t aaron2905/multi-server:least ./server
+  - docker build -t aaron2905/multi-worker:least ./worker
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD" docker.io
-  - docker push aaron2905/multi-client
-  - docker push aaron2905/multi-nginx
-  - docker push aaron2905/multi-server
+  - docker push aaron2905/multi-client:least
+  - docker push aaron2905/multi-nginx:least
+  - docker push aaron2905/multi-server:least
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-1'
