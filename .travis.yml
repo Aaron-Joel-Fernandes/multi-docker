@@ -28,7 +28,7 @@ deploy:
   bucket_name: 'elasticbeanstalk-us-east-1-009660443531'
   bucket_path: 'docker'
   on:
-    repo: https://github.com/Aaron-Joel-Fernandes/multi-docker.git
+    repo: Aaron-Joel-Fernandes/multi-docker
     branch:
       only:
         - master
