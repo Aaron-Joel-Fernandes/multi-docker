@@ -28,6 +28,9 @@ deploy:
   bucket_name: 'elasticbeanstalk-us-east-1-009660443531'
   bucket_path: 'docker'
   on:
-    branch: main
+    repo: https://github.com/Aaron-Joel-Fernandes/multi-docker.git
+    branch:
+      only:
+        - master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
