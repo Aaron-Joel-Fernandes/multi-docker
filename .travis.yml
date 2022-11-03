@@ -19,7 +19,6 @@ after_success:
   - docker push aaron2905/multi-nginx
   - docker push aaron2905/multi-server
 deploy:
-  skip_cleanup: true
   provider: elasticbeanstalk
   region: 'us-east-1'
   app: 'multi-docker'
