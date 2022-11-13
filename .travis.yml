@@ -24,4 +24,4 @@ deploy:
   provider: script
   script: bask ./deploy.sh
   on:
-    branch: master
+    branch: prod
